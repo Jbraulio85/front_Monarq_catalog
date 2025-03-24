@@ -1,0 +1,33 @@
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #B8B7BA;
+  background-color: #090f15;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  font-family: 'Questrial', sans-serif;
+}
+
+.font-castelar {
+  font-family: 'Castelar', serif !important;
+}
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Questrial';
+  src: url('/src/assets/fonts/Questrial-Regular.ttf') format('woff2'),
+}
+
+@font-face {
+  font-family: 'Castelar';
+  src: url('/src/assets/fonts/CASTELAR.TTF') format('truetype'),
+}
