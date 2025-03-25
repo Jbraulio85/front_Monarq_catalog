@@ -4,20 +4,18 @@ import { Navbar } from "./components/Navbar";
 import { DashboardPage } from './pages/DashboardPage';
 import { WomenPage } from './pages/WomenPage';
 import { MenPage } from './pages/MenPage';
-import { CategoryProducts } from './components/CategoryProducts'; // Componente genérico
+import { CategoryProducts } from './components/CategoryProducts';
 import { ProductVisualizer } from './components/ProductVisualizer';
 import { Footer } from './components/Footer';
 
 export const MonarqRoutes = () => {
   return (
     <Router>
-      <div className="flex flex-col h-screen">
-      <div className="w-full bg-black bg-opacity-90 shadow-md">
+      <div className="flex flex-col min-h-screen">
+        <div className="w-full bg-[#090f15] shadow-md fixed top-0 left-0 z-50 h-[70px]">
           <Navbar />
         </div>
-        <div className="flex-grow overflow-auto mt-[80px] max-sm:mt-[20%] mb-[64px] flex items-center justify-center">
-
-
+        <div className="flex-grow flex items-center justify-center pt-[80px]">
           <Routes>
             <Route path="/*" element={<DashboardPage />} />
             <Route path="/women" element={<WomenPage />} />
@@ -30,13 +28,17 @@ export const MonarqRoutes = () => {
             <Route path="/product/:pid" element={<ProductVisualizer />} />
           </Routes>
         </div>
-        <div className="fixed bottom-0 left-0 w-full z-50">
+        <div className="w-full mt-auto">
           <Footer />
         </div>
       </div>
     </Router>
   );
 };
+
+
+
+
 
 
 

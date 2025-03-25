@@ -11,7 +11,7 @@ export const DashboardPage = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 300); // Se reduce el delay para mejorar fluidez
+    }, 300);
 
     return () => clearTimeout(timer);
   }, []);
@@ -27,19 +27,16 @@ export const DashboardPage = () => {
             hidden: { opacity: 0 },
             visible: {
               opacity: 1,
-              transition: { staggerChildren: 0.3 } // Se agrega para mejorar sincronización
+              transition: { staggerChildren: 0.3 }
             }
           }}
           className="flex gap-6 lg:gap-12 xl:gap-16 flex-wrap justify-center"
         >
-          <Card title="Damas" image={damaImg} route="/women" />
-          <Card title="Caballeros" image={caballeroImg} route="/men" />
+          {/* Aquí pasamos 'small' para hacer las cards más pequeñas */}
+          <Card title="Damas" image={damaImg} route="/women" size="medium" />
+          <Card title="Caballeros" image={caballeroImg} route="/men" size="medium" />
         </motion.div>
       )}
     </div>
   );
 };
-
-
-
-

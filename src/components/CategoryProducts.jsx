@@ -7,7 +7,7 @@ export const CategoryProducts = ({ category }) => {
   const CLOUDINARY_BASE_URL = import.meta.env.VITE_CLOUDINARY_BASE_URL;
 
   return (
-    <div className="flex flex-wrap justify-center gap-6 p-4">
+    <div className="flex flex-wrap justify-center gap-4">
       {isLoading ? (
         <p className="text-center text-gray-500">Cargando productos...</p>
       ) : products.length > 0 ? (
@@ -23,6 +23,7 @@ export const CategoryProducts = ({ category }) => {
             route={`/product/${product.pid}`}
             size="small"
             product={product}
+            titleClass="text-xs sm:text-sm lg:text-base xl:text-lg"  // Clase personalizada para el título
           />
         ))
       ) : (
