@@ -9,12 +9,12 @@ export const Carousel = ({ images }) => {
   return (
     <div className="relative mx-auto flex flex-col items-center">
       {/* Imagen Principal (Tamaño responsivo con ajuste de aspecto) */}
-      <div className="relative w-[90%] sm:w-[350px] md:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] flex items-center justify-center bg-gray-100 overflow-hidden">
+      <div className="relative w-[90%] sm:w-[350px] md:w-[400px] lg:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] flex items-center justify-center bg-gray-100 overflow-hidden rounded-2xl">
         <motion.img
           key={current}
           src={images[current]}
           alt={`Image ${current}`}
-          className="w-full h-full object-contain rounded-lg"
+          className="w-full h-full object-contain rounded-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -38,3 +38,4 @@ export const Carousel = ({ images }) => {
     </div>
   );
 };
+

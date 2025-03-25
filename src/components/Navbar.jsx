@@ -117,6 +117,15 @@ export const Navbar = () => {
               Caballeros
             </Link>
           </li>
+          <li className="py-2">
+            <Link
+              to="/about"
+              onClick={handleClick}
+              className="hover:text-gray-500 cursor-pointer"
+            >
+              Nosotros
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

@@ -7,6 +7,7 @@ import { MenPage } from './pages/MenPage';
 import { CategoryProducts } from './components/CategoryProducts';
 import { ProductVisualizer } from './components/ProductVisualizer';
 import { Footer } from './components/Footer';
+import { AboutUs } from './components/AboutUs';
 
 export const MonarqRoutes = () => {
   return (
@@ -26,6 +27,7 @@ export const MonarqRoutes = () => {
             <Route path="/women/accessories" element={<CategoryProducts category="WOMEN_ACCESSORIES" />} />
             <Route path="/men/tshirts" element={<CategoryProducts category="MEN_TSHIRTS" />} />
             <Route path="/product/:pid" element={<ProductVisualizer />} />
+            <Route path="/about" element={<AboutUs />} />
           </Routes>
         </div>
         <div className="w-full mt-auto">
